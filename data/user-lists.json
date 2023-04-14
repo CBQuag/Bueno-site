@@ -1,6 +1,6 @@
 [
     {
-        "user": "",
+        "user": "Conrad",
         "list":[
             {
                 "name":     "The Tatami Galaxy",
@@ -41,6 +41,19 @@
             {
                 "name":     "Mahoujin Guruguru",
                 "score":    7
+            }
+        ]
+    },
+    {
+        "user":"John Q Anime",
+        "list":[
+            {
+              "name":"Erased",
+              "score":10  
+            },
+            {
+                "name":"Redline",
+                "score":8
             }
         ]
     }

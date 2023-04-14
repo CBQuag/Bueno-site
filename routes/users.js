@@ -42,6 +42,8 @@ router.post('/',(req,res)=>{
             res.json(newUser);
         })
 
+        //post a new list here
+
     })
     res.send()
 });
