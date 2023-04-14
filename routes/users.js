@@ -59,13 +59,52 @@ router.post('/',(req,res)=>{
         fs.writeFile(USER_FILE, JSON.stringify(userFile), err=>{
             if(err){
                 console.error(err);
-                res.status(500).send('There was a problem reading the file.')
+                res.status(500).send('There was a problem writing the file.')
                 return;
             }
             res.json(newUser);
         })
     })
 });
+
+//adds a new entry to a user's list
+router.post('/:user', (req, res)=>{
+    
+    fs.readFile(USER_FILE, 'utf-8', (err, data)=>{
+        if(err){
+            console.error(err);
+            res.status(500).send('There was a problem reading the file.')
+            return;
+        }
+        const {user}=req.params;
+
+        const userFile=JSON.parse(data);
+
+        convertedUser=user.replace(/_/g, " ");
+
+        let currentUser=userFile.find(u=>u.name.toLowerCase()==convertedUser.toLowerCase())
+
+        console.log(currentUser)
+
+        const newEntry={
+            name:req.body.name,
+            score:req.body.score
+        };
+        
+        currentUser.list.push(newEntry);
+
+        console.log(userFile);
+
+        fs.writeFile(USER_FILE, JSON.stringify(userFile), err=>{
+            if(err){
+                console.error(err);
+                res.status(500).send('There was a problem writing the file.')
+                return;
+            }
+            res.json(newUser);
+        })
+    })
+})
 
 //change the password
 router.put('/',(req,res)=>{    
