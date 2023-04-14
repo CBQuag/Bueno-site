@@ -17,6 +17,24 @@ router.get('/',(req,res)=>{
     })
 })
 
+//get a specific user's list
+router.get('/:user',(req, res)=>{
+    let {user}=req.params;
+    convertedUser=user.replace(/_/g, " ");
+
+    fs.readFile(USER_LISTS, 'utf-8', (err, data)=>{
+        if(err){
+            console.error(err);
+            res.status(500).send('There was a problem reading the file.')
+            return;
+        }
+        let userList=JSON.parse(data);
+        let currentUser=userList.find(u=>u.user.toLowerCase()==convertedUser.toLowerCase())
+
+        res.json(currentUser);
+    })
+})
+
 //add a new user with a default empty list
 router.post('/',(req,res)=>{
 

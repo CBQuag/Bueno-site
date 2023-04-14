@@ -24,15 +24,16 @@ router.get('/:name', (req, res)=>{
 
     const {name}=req.params;
 
-    console.log(name);
+    convertedName=name.replace(/_/g, " ");
+
+    console.log(convertedName);
 
     let jsonShow=JSON.parse(showList.toString())
-    currentShow=jsonShow.find(show=>show.name.toLowerCase()===name.toLowerCase());
+    currentShow=jsonShow.find(show=>show.name.toLowerCase()===convertedName.toLowerCase());
 
     console.log('Current Show: ',currentShow)
-    
-    res.send(`<h1>${currentShow.name} (${currentShow.date.year})</h1>
-              <a style='text-decoration:none' href='./'>Back to main</a>`)
+
+    res.send(currentShow)
 })
 
 module.exports = router;
