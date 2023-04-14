@@ -54,3 +54,8 @@ request methods:
 
 `/users/:user`  - POST
 - Given a title and score, adds a show to a user's list
+- Example for `/users/Ivo_Robotnik`:
+```
+"name":"Sonic the Hedgehog (1996)"
+"score":0
+```
