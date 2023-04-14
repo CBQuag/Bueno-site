@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// var cookieParser = require('cookie-parser');
+// var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/users');
@@ -10,19 +10,19 @@ var peopleRouter=require('./routes/people');
 
 var app = express();
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
+// app.use(cookieParser());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', userRouter);
 
 const port=3000;
 
 app.get('/',(req,res)=>{
-    res.send('');
+    res.send('Welcome, welcome to buenosite');
 });
 
 app.use('/users', userRouter);
