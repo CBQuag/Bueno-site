@@ -5,10 +5,10 @@ myanimelist, but it's not mal, it's bueno.
 
 request methods:
 
-`/shows` - GET
+`/shows`        - GET
 - Returns a list of all shows with information available
 
-`/shows/:name` - GET
+`/shows/:name`  - GET
 - Returns info for a specific show
 - Example response from `/shows/Sonny_Boy`
 ```
@@ -21,14 +21,14 @@ request methods:
     }
 ```
 
-`/shows` - POST
+`/shows`        - POST
 - Given show information, adds a new show to the main list of shows
 
 
-`/users` - GET
+`/users`        - GET
 - Returns a list of users
 
-`/users/:user` - GET
+`/users/:user`  - GET
 - Returns a specific user
 - Example response from `/users/John_Q_Anime`
 ```
@@ -49,5 +49,8 @@ request methods:
 ```
 >Erased as a 10? Couldn't be me
 
-`/users/:user` - POST
+`/users/`       - POST
+- Given a name and password, adds a new user to the list of users
+
+`/users/:user`  - POST
 - Given a title and score, adds a show to a user's list
