@@ -38,7 +38,7 @@ request methods:
         "list":[
             {
                 "name":"Erased",
-              "score":10  
+                "score":10  
             },
             {
                 "name":"Redline",
