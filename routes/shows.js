@@ -52,8 +52,8 @@ router.post('/', (req, res)=>{
             name: req.body.name,
             director: req.body.director,
             episodes: req.body.episodes,
-                season: req.body.season,
-                year:   req.body.year
+            season: req.body.season,
+            year:   req.body.year
         }
 
         console.log(newShow)

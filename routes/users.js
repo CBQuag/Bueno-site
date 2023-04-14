@@ -12,6 +12,7 @@ router.get('/',(req,res)=>{
             res.status(500).send('There was a problem reading the file.')
             return;
         }
+        console.log(JSON.parse(data));
         res.json(JSON.parse(data));
     })
 })
@@ -51,8 +52,6 @@ router.post('/',(req,res)=>{
             pass:req.body.pass,
             list:[]
         };
-
-        console.log(userFile);
         
         userFile.push(newUser);
 
@@ -84,16 +83,12 @@ router.post('/:user', (req, res)=>{
 
         let currentUser=userFile.find(u=>u.name.toLowerCase()==convertedUser.toLowerCase())
 
-        console.log('CURRENT USER: ',currentUser);
-
         const newEntry={
             name:req.body.name,
             score:req.body.score
         };
         
         currentUser.list.push(newEntry);
-
-        console.log(userFile);
 
         fs.writeFile(USER_FILE, JSON.stringify(userFile), err=>{
             if(err){

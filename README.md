@@ -10,6 +10,19 @@ request methods:
 
 `/shows/:name` - GET
 - Returns info for a specific show
+- Example response from `/shows/Sonny_Boy`
+```
+    {
+        "name": "Sonny Boy",
+        "director": "Shingo Natsume",
+        "episodes": 12,
+        "season": "Summer",
+        "year": 2021
+    }
+```
+
+`/shows` - POST
+- Given show information, adds a new show to the main list of shows
 
 
 `/users` - GET
@@ -17,6 +30,24 @@ request methods:
 
 `/users/:user` - GET
 - Returns a specific user
+- Example response from `/users/John_Q_Anime`
+```
+    {
+        "name":"John Q Anime",
+        "pass":"Password1",
+        "list":[
+            {
+                "name":"Erased",
+              "score":10  
+            },
+            {
+                "name":"Redline",
+                "score": 8
+            }
+        ]
+    }
+```
+>erased as a 10? couldn't be me
 
 `/users/:user` - POST
 - Given a title and score, adds a show to a user's list
