@@ -5,6 +5,7 @@ const fs=require('fs')
 let USER_FILE='./data/users.json';
 let USER_LISTS='./data/user-lists.json';
 
+//get the list of users
 router.get('/',(req,res)=>{    
     fs.readFile(USER_FILE, 'utf-8', (err, data)=>{
         if(err){
@@ -16,6 +17,7 @@ router.get('/',(req,res)=>{
     })
 })
 
+//add a new user with a default empty list
 router.post('/',(req,res)=>{
 
     //posts a new user to the list of users
@@ -76,10 +78,12 @@ router.post('/',(req,res)=>{
     })
 });
 
+//change the password
 router.put('/',(req,res)=>{    
     res.send()
 });
 
+//delete account and associated list
 router.delete('/',(req,res)=>{    
     res.send()
 });
