@@ -6,7 +6,13 @@ let USER_FILE='./data/users.json';
 // let USER_LISTS='./data/user-lists.json';
 
 router.get('/',(req,res)=>{    
-    res.send()
+    fs.readFile(USER_FILE, 'utf-8', (err, data)=>{
+        if(err){
+            console.error(err);
+            res.status(500).send('There was a problem reading the file.')
+            return;
+        }
+        res.json(JSON.parse(data));
 });
 
 router.post('/',(req,res)=>{  
@@ -23,10 +29,18 @@ router.post('/',(req,res)=>{
             pass:req.body.pass
         };
         
-
         userList.push(newUser);
 
         console.log(userList);
+
+        fs.writeFile(USER_FILE, JSON.stringify(userList), err=>{
+            if(err){
+                console.error(err);
+                res.status(500).send('There was a problem reading the file.')
+                return;
+            }
+            res.json(newUser);
+        })
 
     })
     res.send()

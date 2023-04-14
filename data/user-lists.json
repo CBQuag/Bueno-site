@@ -1,0 +1,47 @@
+[
+    {
+        "user": "",
+        "list":[
+            {
+                "name":     "The Tatami Galaxy",
+                "score":    10
+            },
+            {
+                "name":     "Sonny Boy",
+                "score":    9
+            },
+            {
+                "name":     "Punch Line",
+                "score":    8
+            },
+            {
+                "name":     "Redline",
+                "score":    9
+            },
+            {
+                "name":     "Skelter Heaven",
+                "score":    1
+            },
+            {
+                "name":     "Erased",
+                "score":    2
+            },
+            {
+                "name":     "Cleopatra",
+                "score":    4
+            },
+            {
+                "name":     "Midnight Eye: Goku",
+                "score":    7
+            },
+            {
+                "name":     "Dragon Quest: Your Story",
+                "score":    6
+            },
+            {
+                "name":     "Mahoujin Guruguru",
+                "score":    7
+            }
+        ]
+    }
+]
