@@ -49,7 +49,8 @@ router.post('/',(req,res)=>{
 
         const newUser={
             name:req.body.name,
-            pass:req.body.pass
+            pass:req.body.pass,
+            list:[]
         };
         
         userFile.push(newUser);
@@ -63,35 +64,6 @@ router.post('/',(req,res)=>{
                 return;
             }
             res.json(newUser);
-        })
-    })
-
-    //posts a new list for the new user
-    fs.readFile(USER_LISTS, 'utf-8', (err, data)=>{
-        if(err){
-            console.error(err);
-            res.status(500).send('There was a problem reading the file.')
-            return;
-        }
-
-        const userList=JSON.parse(data);
-
-        let newList={
-            "user":req.body.name,
-            "list":[]
-        }
-
-        userList.push(newList);
-
-        console.log(newList);
-
-        fs.writeFile(USER_LISTS, JSON.stringify(userList), err=>{
-            if(err){
-                console.error(err);
-                res.status(500).send('There was a problem reading the file.')
-                return;
-            }
-            res.json(newList);
         })
     })
 });
