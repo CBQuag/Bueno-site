@@ -4,12 +4,12 @@
         "pass":"Password1",
         "list":[
             {
-                "name":"Erased",
-              "score":10  
+                "name":     "Erased",
+                "score":    10  
             },
             {
-                "name":"Redline",
-                "score": 8
+                "name":     "Redline",
+                "score":    8
             }
         ]
     },
