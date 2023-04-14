@@ -67,7 +67,7 @@ router.post('/',(req,res)=>{
     })
 });
 
-//adds a new entry to a user's list
+//adds a new entry to a user's list with a name and score
 router.post('/:user', (req, res)=>{
     
     fs.readFile(USER_FILE, 'utf-8', (err, data)=>{
