@@ -49,13 +49,11 @@ router.post('/', (req, res)=>{
         const showsFile=JSON.parse(data);
 
         let newShow={
-            name: res.params.name,
-            director: res.params.director,
-            episodes: res.params.episodes,
-            date: {
-                season: res.params.season,
-                year:   res.params.year
-            }
+            name: req.body.name,
+            director: req.body.director,
+            episodes: req.body.episodes,
+                season: req.body.season,
+                year:   req.body.year
         }
 
         console.log(newShow)

@@ -51,10 +51,10 @@ router.post('/',(req,res)=>{
             pass:req.body.pass,
             list:[]
         };
-        
-        userFile.push(newUser);
 
         console.log(userFile);
+        
+        userFile.push(newUser);
 
         fs.writeFile(USER_FILE, JSON.stringify(userFile), err=>{
             if(err){
@@ -84,7 +84,7 @@ router.post('/:user', (req, res)=>{
 
         let currentUser=userFile.find(u=>u.name.toLowerCase()==convertedUser.toLowerCase())
 
-        console.log(currentUser)
+        console.log('CURRENT USER: ',currentUser);
 
         const newEntry={
             name:req.body.name,
@@ -101,7 +101,7 @@ router.post('/:user', (req, res)=>{
                 res.status(500).send('There was a problem writing the file.')
                 return;
             }
-            res.json(newUser);
+            res.json(newEntry);
         })
     })
 })

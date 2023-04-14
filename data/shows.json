@@ -3,90 +3,71 @@
         "name": "The Tatami Galaxy",
         "director":"Masaaki Yuasa",
         "episodes":11,
-        "date": {
             "season": "Spring",
             "year": 2010
-        }
     },
     {
         "name": "Sonny Boy",
         "director": "Shingo Natsume",
         "episodes": 12,
-        "date": {
             "season": "Summer",
             "year": 2021
-        }
     },
     {
         "name": "Punch Line",
         "director": "Yutaka Uemura",
         "episodes": 12,
-        "date": {
             "season": "Spring",
             "year": 2015
-        }
     },
     {
         "name": "Redline",
         "director": "Takeshi Koike",
         "episodes": 1,
-        "date": {
             "season": "Fall",
             "year": 2009
-        }
     },
     {
         "name": "Skelter Heaven",
         "director": "Yoshiteru Satou",
         "episodes": 1,
-        "date": {
             "season": "Fall",
             "year": 2004
-        }
     },
     {
         "name": "Erased",
         "director": "Tomohiko Itou",
         "episodes": 12,
-        "date": {
             "season": "Winter",
             "year": 2016
-        }
+
     },
     {
         "name": "Cleopatra",
         "director": "Osamu Tezuka",
         "episodes": 1,
-        "date": {
             "season": "Fall",
             "year": 1970
-        }
     },
     {
         "name": "Midnight Eye: Goku",
         "director": "Yoshiaki Kawajiri",
         "episodes": 1,
-        "date": {
             "season": "Winter",
             "year": 1989
-        }
     },
     {
         "name": "Dragon Quest: Your Story",
         "director": "Takashi Yamazaki",
         "episodes": 1,
-        "date": {
             "season": "Fall",
             "year": 2019
-        }
     },
     {
         "name": "Mahoujin Guruguru",
         "director": "Ikehata Hiroshi",
         "episodes": 24,
-        "date": {
             "season": "Summer",
             "year": 2017
-        }
     }
 ]
