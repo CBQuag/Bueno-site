@@ -3,7 +3,6 @@ const router=express.Router();
 const fs=require('fs')
 
 let USER_FILE='./data/users.json';
-let USER_LISTS='./data/user-lists.json';
 
 //get the list of users
 router.get('/',(req,res)=>{    
@@ -22,14 +21,14 @@ router.get('/:user',(req, res)=>{
     let {user}=req.params;
     convertedUser=user.replace(/_/g, " ");
 
-    fs.readFile(USER_LISTS, 'utf-8', (err, data)=>{
+    fs.readFile(USER_FILE, 'utf-8', (err, data)=>{
         if(err){
             console.error(err);
             res.status(500).send('There was a problem reading the file.')
             return;
         }
         let userList=JSON.parse(data);
-        let currentUser=userList.find(u=>u.user.toLowerCase()==convertedUser.toLowerCase())
+        let currentUser=userList.find(u=>u.name.toLowerCase()==convertedUser.toLowerCase())
 
         res.json(currentUser);
     })
