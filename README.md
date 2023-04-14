@@ -47,7 +47,7 @@ request methods:
         ]
     }
 ```
->erased as a 10? couldn't be me
+>Erased as a 10? Couldn't be me
 
 `/users/:user` - POST
 - Given a title and score, adds a show to a user's list
