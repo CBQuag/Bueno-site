@@ -6,17 +6,17 @@ myanimelist, but it's not mal, it's bueno.
 request methods:
 
 `/shows` - GET
--Returns a list of all shows with information available
+- Returns a list of all shows with information available
 
 `/shows/:name` - GET
--Returns info for a specific show
+- Returns info for a specific show
 
 
 `/users` - GET
--Returns a list of users
+- Returns a list of users
 
 `/users/:user` - GET
--Returns a specific user
+- Returns a specific user
 
 `/users/:user` - POST
--Given a title and score, adds a show to a user's list
+- Given a title and score, adds a show to a user's list
