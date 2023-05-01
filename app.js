@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')));
 
 const port=normalizePort(process.env.PORT||3000);
+app.set('port', port);
 
 app.get('/',(req,res)=>{
     res.send('Welcome, welcome to buenosite');
